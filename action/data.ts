@@ -14,7 +14,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 2,
@@ -50,7 +51,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 6,
@@ -95,7 +97,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 11,
@@ -122,7 +125,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 14,
@@ -167,7 +171,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 19,
@@ -185,7 +190,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        popularity: 'popular'
     },
     {
         id: 21,
