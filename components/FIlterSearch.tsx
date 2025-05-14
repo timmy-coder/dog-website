@@ -4,10 +4,15 @@ import { Checkbox } from "./ui/checkbox";
 import { useState } from "react";
 function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => void; selected: any }) {
     const [gender, setGender] = useState<'Male' | 'Female' | null>(selected.gender);
+    const [color, setColor] = useState<'red' | 'black&white' |'black' | 'silver' | "apricot" |'tan' | null>(selected.color);
     const pick = (gender: 'Male' | 'Female'| null) => {
     setGender(gender);
-    setSelected({gender:gender})
+    setSelected({ ...selected, gender: gender })
   };
+  const ColorPick = (color: 'red' | 'black&white' |'black' | 'silver' | "apricot" |'tan' | null) => {
+    setColor(color)
+    setSelected({...selected, color: color})
+  }
   return (
     <div className="mb-10">
       <p className="text-[#003459]  text-2xl font-bold mb-3">Filter</p>
@@ -28,32 +33,32 @@ function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => 
         <p className="text-base font-bold mb-3">Color</p>
         <div className="flex flex-col items-start gap-[8px]">
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={color === 'red'} onCheckedChange={() => {color === 'red' ? ColorPick(null) : ColorPick('red')}} />
             <div className="bg-[#FF564F] w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Red</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={color === 'apricot'} onCheckedChange={() => {color === 'apricot' ? ColorPick(null) : ColorPick('apricot')}} />
             <div className="bg-[#FFB672] w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Apricot</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={color === 'black'} onCheckedChange={() => {color === 'black' ? ColorPick(null) : ColorPick('black')}} />
             <div className="bg-[#242B33] w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Black</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+           <Checkbox checked={color === 'black&white'} onCheckedChange={() => {color === 'black&white' ? ColorPick(null) : ColorPick('black&white')}} />
             <div className="bg-[linear-gradient(90deg,#242B33,#D7D7D7)]  w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Black & White</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={color === 'silver'} onCheckedChange={() => {color === 'silver' ? ColorPick(null) : ColorPick('silver')}} />
             <div className="bg-[#CECECE]  w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Silver</span>
           </div>
           <div className="flex items-center gap-[10px]">
-            <Checkbox />
+             <Checkbox checked={color === 'tan'} onCheckedChange={() => {color === 'tan' ? ColorPick(null) : ColorPick('tan')}} />
             <div className="bg-[#FFF7CE]  w-[15px] h-[15px] rounded-[10px] "></div>
             <span>Tan</span>
           </div>

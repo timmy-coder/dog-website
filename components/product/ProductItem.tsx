@@ -36,7 +36,7 @@ function ProductItem({ product }: Props) {
                             <span className="font-extrabold xl:flex items-start hidden ">.</span>
                             <p>Age: <span className="font-bold">{item.age}</span></p>
                         </div>
-                            <p className="text-base font-bold text-[#00171F]"> {new Intl.NumberFormat('id-ID').format(item.price)}VND</p>
+                            <p className="text-base font-bold text-[#00171F]"> {new Intl.NumberFormat('id-ID').format(item.price)} VND</p>
 
                     </div>
                 </div>

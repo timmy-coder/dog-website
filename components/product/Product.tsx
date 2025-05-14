@@ -26,12 +26,19 @@ function Product() {
   const [Sortby, setSortby] = useState('')
   const [filterSearch, setfilterSearch] = useState<DataType[]>([])
   const [selected, setSelected] = useState({
-    gender: ''
+    gender: '',
+    color: ''
   });
   useEffect(() => {
   let filtered = [...product];
   if (selected.gender) {
     filtered = filtered.filter((e) => e.gender === selected.gender);
+  }
+  if(selected.color){
+     filtered = filtered.filter((e) => e.color === selected.color);
+  }
+  if (selected.gender && selected.color){
+    filtered = filtered.filter((e) => e.color === selected.color && e.gender === selected.gender);
   }
   if (Sortby === 'popular') {
     filtered = filtered.filter((e) =>  e.popularity === Sortby);
@@ -83,7 +90,7 @@ function Product() {
       {filterSearch.length>0?(
         <ProductItem product={filterSearch}/>
       ): (
-        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold">No search result for {Sortby} ({selected.gender}) </p>
+        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} puppies </p>
       )}
         
         </div>
