@@ -25,19 +25,27 @@ function Product() {
   const product:DataType[]  = dogData 
   const [Sortby, setSortby] = useState('')
   const [filterSearch, setfilterSearch] = useState<DataType[]>([])
-  const FilterSearch = () => {
-    const filterSearch = product.filter((e) => e.popularity === Sortby || e.title === Sortby)
-    setfilterSearch(filterSearch)
-  }
+  const [selected, setSelected] = useState({
+    gender: ''
+  });
   useEffect(() => {
-    FilterSearch()
-  }, [Sortby])
+  let filtered = [...product];
+  if (selected.gender) {
+    filtered = filtered.filter((e) => e.gender === selected.gender);
+  }
+  if (Sortby === 'popular') {
+    filtered = filtered.filter((e) =>  e.popularity === Sortby);
+  } else if (Sortby) {
+    filtered = filtered.filter((e) => e.title === Sortby);
+  }
+  setfilterSearch(filtered);
+}, [Sortby, selected]);
   return (
     <div>
       {/* Search filter */}
       <div className="flex items-start gap-10">
         <div className="w-[280px] sticky top-0 hidden xl:block">
-          <FIlterSearch/>
+          <FIlterSearch setSelected={setSelected} selected={selected}/>
         </div>
         <div className="flex-1">
           <div className="flex items-center justify-between mb-5">
@@ -59,7 +67,7 @@ function Product() {
         <div className="xl:flex items-end gap-5 hidden ">
         <p className="text-[#003459] text-2xl font-bold">Small Dog</p>
         <p className="text-[#667479] text-sm font-medium">
-          {filterSearch.length>0?filterSearch.length:product.length} puppies
+          {filterSearch.length} puppies
         </p>
       </div>
 
@@ -67,11 +75,17 @@ function Product() {
           <DialogTrigger className="outline-none xl:hidden flex items-center text-[#002A48]"><Funnel className="w-[24px] h-[24px] gap-[8px]"/> <span className="font-bold text-base">Filter</span></DialogTrigger>
           <DialogContent>
             <DialogTitle className="hidden"></DialogTitle>
-            <FIlterSearch/>
+            <FIlterSearch  selected={selected} setSelected={setSelected}/>
           </DialogContent>
         </Dialog>
       </div>
-        <ProductItem product={filterSearch.length>0?filterSearch:product}/>
+
+      {filterSearch.length>0?(
+        <ProductItem product={filterSearch}/>
+      ): (
+        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold">No search result for {Sortby} ({selected.gender}) </p>
+      )}
+        
         </div>
        
       </div>

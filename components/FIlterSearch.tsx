@@ -1,7 +1,13 @@
+'use client'
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "./ui/checkbox";
-
-function FIlterSearch() {
+import { useState } from "react";
+function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => void; selected: any }) {
+    const [gender, setGender] = useState<'Male' | 'Female' | null>(selected.gender);
+    const pick = (gender: 'Male' | 'Female'| null) => {
+    setGender(gender);
+    setSelected({gender:gender})
+  };
   return (
     <div className="mb-10">
       <p className="text-[#003459]  text-2xl font-bold mb-3">Filter</p>
@@ -9,11 +15,11 @@ function FIlterSearch() {
         <p className="text-base font-bold mb-3">Gender</p>
         <div className="flex flex-col items-start gap-[8px]">
           <div className="flex items-start gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={gender === 'Male'} onCheckedChange={() => {gender === 'Male' ? pick(null) : pick('Male')}} />
             <span>Male</span>
           </div>
           <div className="flex items-start gap-[10px]">
-            <Checkbox />
+            <Checkbox  checked={gender === 'Female'} onCheckedChange={() => {gender === 'Female' ? pick(null) : pick('Female')}} />
             <span>Female</span>
           </div>
         </div>
