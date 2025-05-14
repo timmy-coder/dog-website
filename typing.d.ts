@@ -7,4 +7,5 @@ export interface DataType  {
     gender: string;
     image: StaticImageData
     popularity?: string;
+    breed: "small"| 'medium'| 'large';
 }

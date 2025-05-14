@@ -3,15 +3,12 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
@@ -27,7 +24,8 @@ function Product() {
   const [filterSearch, setfilterSearch] = useState<DataType[]>([])
   const [selected, setSelected] = useState({
     gender: '',
-    color: ''
+    color: '',
+    breed: ''
   });
   useEffect(() => {
   let filtered = [...product];
@@ -37,8 +35,8 @@ function Product() {
   if(selected.color){
      filtered = filtered.filter((e) => e.color === selected.color);
   }
-  if (selected.gender && selected.color){
-    filtered = filtered.filter((e) => e.color === selected.color && e.gender === selected.gender);
+  if(selected.breed){
+    filtered = filtered.filter((e) => e.breed === selected.breed);
   }
   if (Sortby === 'popular') {
     filtered = filtered.filter((e) =>  e.popularity === Sortby);
@@ -58,16 +56,16 @@ function Product() {
           <div className="flex items-center justify-between mb-5">
         <DropdownMenu>
           <DropdownMenuTrigger className="outline-none border flex items-center gap-[4px] pt-[10px] pb-[8px] pl-[20px] pr-[12px] border-[#CCD1D2] rounded-[20px] text-[#667479] font-medium">
-            Sort by:  {Sortby} <ChevronDown size={20} />
+            Sort by:  {Sortby==='popular'?Sortby:'Name'} <ChevronDown size={20} />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="text-[#667479] font-medium">
             <DropdownMenuItem onClick={() => setSortby('')} >All</DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={() => setSortby('popular')}>Popular</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => setSortby('MO502 - Poodle Tiny Yellow')} >MO502 - Poodle Tiny Yellow</DropdownMenuItem>
-             <DropdownMenuItem onClick={() => setSortby('MO102 - Poodle Tiny Sepia')} >MO102 - Poodle Tiny Sepia</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setSortby('MO512 - Alaskan Malamute Grey')} >MO512 - Alaskan Malamute Grey</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setSortby('MO502 - Poodle Tiny Yellow')} >Poodle Tiny Yellow</DropdownMenuItem>
+             <DropdownMenuItem onClick={() => setSortby('MO102 - Poodle Tiny Sepia')} >Poodle Tiny Sepia</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setSortby('MO512 - Alaskan Malamute Grey')} >Alaskan Malamute Grey</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -90,11 +88,9 @@ function Product() {
       {filterSearch.length>0?(
         <ProductItem product={filterSearch}/>
       ): (
-        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} puppies </p>
+        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold capitalize">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} {selected.breed&&((selected.breed))} puppies </p>
       )}
-        
         </div>
-       
       </div>
      
     </div>

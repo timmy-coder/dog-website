@@ -5,6 +5,7 @@ import { useState } from "react";
 function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => void; selected: any }) {
     const [gender, setGender] = useState<'Male' | 'Female' | null>(selected.gender);
     const [color, setColor] = useState<'red' | 'black&white' |'black' | 'silver' | "apricot" |'tan' | null>(selected.color);
+    const [breed, setBreed] = useState<'small'  |'medium' | 'large' | null>(selected.breed);
     const pick = (gender: 'Male' | 'Female'| null) => {
     setGender(gender);
     setSelected({ ...selected, gender: gender })
@@ -12,6 +13,10 @@ function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => 
   const ColorPick = (color: 'red' | 'black&white' |'black' | 'silver' | "apricot" |'tan' | null) => {
     setColor(color)
     setSelected({...selected, color: color})
+  }
+  const BreedPick = (breed: "small"| 'medium'| 'large'| null) => {
+    setBreed(breed)
+    setSelected({...selected, breed: breed})
   }
   return (
     <div className="mb-10">
@@ -87,15 +92,15 @@ function FIlterSearch({ setSelected, selected }: { setSelected: (value: any) => 
         <p className="text-base font-bold mb-3">Breed</p>
         <div className="flex flex-col items-start gap-[8px]">
           <div className="flex items-start gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={breed === 'small'} onCheckedChange={() => {breed === 'small' ? BreedPick(null) : BreedPick('small')}} />
             <span>Small</span>
           </div>
           <div className="flex items-start gap-[10px]">
-            <Checkbox />
+           <Checkbox checked={breed === 'medium'} onCheckedChange={() => {breed === 'medium' ? BreedPick(null) : BreedPick('medium')}} />
             <span>Medium</span>
           </div>
           <div className="flex items-start gap-[10px]">
-            <Checkbox />
+            <Checkbox checked={breed === 'large'} onCheckedChange={() => {breed === 'large' ? BreedPick(null) : BreedPick('large')}} />
             <span>Large</span>
           </div>
         </div>

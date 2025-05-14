@@ -5,7 +5,6 @@ import Dog3 from "../public/dog3.png"
 import Dog4 from "../public/dog4.png"
 import Dog5 from "../public/dog5.png"
 import Dog6 from "../public/dog6.png"
-
 export const dogData:DataType[] = [
     {
         id: 1,
@@ -15,7 +14,8 @@ export const dogData:DataType[] = [
         price: 3900000,
         gender: 'Female',
         color: "red",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: 'small'
     },
     {
         id: 2,
@@ -24,7 +24,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: "medium"
     },
     {
         id: 3,
@@ -33,7 +34,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: 'large'
     },
     {
         id: 4,
@@ -42,7 +44,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 5,
@@ -52,7 +55,8 @@ export const dogData:DataType[] = [
         price: 2000000,
         gender: 'Male',
         color: "apricot",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: 'small'
     },
     {
         id: 6,
@@ -61,7 +65,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 7,
@@ -70,7 +75,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "black"
+        color: "black",
+        breed: "medium"
     },
     {
         id: 8,
@@ -79,7 +85,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: 'medium'
     },
     {
         id: 9,
@@ -88,7 +95,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "medium"
     },
     {
         id: 10,
@@ -98,7 +106,8 @@ export const dogData:DataType[] = [
         price: 1000000,
         gender: 'Male',
         color: "red",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: 'medium'
     },
     {
         id: 11,
@@ -107,7 +116,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "silver"
+        color: "silver",
+        breed: "small"
     },
     {
         id: 12,
@@ -116,7 +126,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "silver"
+        color: "silver",
+        breed: "large"
     },
     {
         id: 13,
@@ -126,7 +137,8 @@ export const dogData:DataType[] = [
         price: 3900000,
         gender: 'Female',
         color: "red",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: "medium"
     },
     {
         id: 14,
@@ -135,7 +147,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: 'medium'
     },
     {
         id: 15,
@@ -144,7 +157,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 16,
@@ -153,7 +167,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "large"
     },
     {
         id: 17,
@@ -162,7 +177,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "black&white"
+        color: "black&white",
+        breed: "small"
     },
     {
         id: 18,
@@ -172,7 +188,8 @@ export const dogData:DataType[] = [
         price: 3900000,
         gender: 'Female',
         color: "silver",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: "medium"
     },
     {
         id: 19,
@@ -181,7 +198,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "apricot"
+        color: "apricot",
+        breed: "medium"
     },
     {
         id: 20,
@@ -191,7 +209,8 @@ export const dogData:DataType[] = [
         price: 4000000,
         gender: 'Male',
         color: "apricot",
-        popularity: 'popular'
+        popularity: 'popular',
+        breed: "small"
     },
     {
         id: 21,
@@ -200,7 +219,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: 'medium'
     },
     {
         id: 22,
@@ -209,7 +229,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 23,
@@ -218,7 +239,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: "small"
     },
     {
         id: 24,
@@ -227,7 +249,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "silver"
+        color: "silver",
+        breed: "small"
     },
     {
         id: 25,
@@ -236,7 +259,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 26,
@@ -245,7 +269,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "black&white"
+        color: "black&white",
+        breed: "small"
     },
     {
         id: 27,
@@ -254,7 +279,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: 'medium'
     },
     {
         id: 28,
@@ -263,7 +289,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: "small"
     },
     {
         id: 29,
@@ -272,7 +299,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 30,
@@ -281,7 +309,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "black"
+        color: "black",
+        breed: "small"
     },
     {
         id: 31,
@@ -290,7 +319,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "black"
+        color: "black",
+        breed: "medium"
     },
     {
         id: 32,
@@ -299,7 +329,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "medium"
     },
     {
         id: 33,
@@ -308,7 +339,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "black"
+        color: "black",
+        breed: "large"
     },
     {
         id: 34,
@@ -317,7 +349,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "black&white"
+        color: "black&white",
+        breed: "medium"
     },
     {
         id: 35,
@@ -326,7 +359,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: "large"
     },
     {
         id: 36,
@@ -335,7 +369,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "apricot"
+        color: "apricot",
+        breed: "small"
     },
     {
         id: 37,
@@ -344,7 +379,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "black"
+        color: "black",
+        breed: "small"
     },
     {
         id: 38,
@@ -353,7 +389,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "black"
+        color: "black",
+        breed: "small"
     },
     {
         id: 39,
@@ -362,7 +399,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "apricot"
+        color: "apricot",
+        breed: "small"
     },
     {
         id: 40,
@@ -371,7 +409,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "black"
+        color: "black",
+        breed: "small"
     },
     {
         id: 41,
@@ -380,7 +419,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "black&white"
+        color: "black&white",
+        breed:  "small"
     },
     {
         id: 42,
@@ -389,7 +429,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "black&white"
+        color: "black&white",
+        breed: "small"
     },
     {
         id: 43,
@@ -398,7 +439,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 44,
@@ -407,7 +449,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: 'small'
     },
     {
         id: 45,
@@ -416,7 +459,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 8900000,
         gender: 'Male',
-        color: "tan"
+        color: "tan",
+        breed: "small"
     },
     {
         id: 46,
@@ -425,7 +469,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 1000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "medium"
     },
     {
         id: 47,
@@ -434,7 +479,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 2000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "medium"
     },
     {
         id: 48,
@@ -443,7 +489,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        breed: "small"
     },
     {
         id: 49,
@@ -452,7 +499,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 3900000,
         gender: 'Female',
-        color: "red"
+        color: "red",
+        breed: "medium"
     },
     {
         id: 50,
@@ -461,7 +509,8 @@ export const dogData:DataType[] = [
         age: "02 months",
         price: 4000000,
         gender: 'Male',
-        color: "red"
+        color: "red",
+        breed: "large"
     },
     
     
