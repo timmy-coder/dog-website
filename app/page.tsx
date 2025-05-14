@@ -1,7 +1,8 @@
+import Product from "@/components/product/Product";
 export default function Home() {
   return (
     <main>
-      page
+      <Product/>
     </main>
   );
 }
