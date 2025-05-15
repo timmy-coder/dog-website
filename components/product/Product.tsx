@@ -57,7 +57,7 @@ function Product() {
         <div className="flex-1">
           <div className="flex items-center justify-between mb-5">
         <DropdownMenu>
-          <DropdownMenuTrigger className="outline-none border flex items-center gap-[4px] pt-[10px] pb-[8px] pl-[20px] pr-[12px] border-[#CCD1D2] rounded-[20px] text-[#667479] font-medium">
+          <DropdownMenuTrigger className="outline-none border flex items-center gap-[4px] pt-[10px] pb-[8px] pl-[20px] pr-[12px] border-[#CCD1D2] rounded-[20px] text-[#667479] font-medium font-[GilroyMedium]">
             Sort by:  {Sortby==='popular'?Sortby:'Name'} <ChevronDown size={20} />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="text-[#667479] font-medium">
@@ -72,8 +72,8 @@ function Product() {
         </DropdownMenu>
 
         <div className="xl:flex items-end gap-5 hidden ">
-        <p className="text-[#003459] text-2xl font-bold">Small Dog</p>
-        <p className="text-[#667479] text-sm font-medium">
+        <p className="text-[#003459] text-2xl font-bold font-[GilroyBold]">Small Dog</p>
+        <p className="text-[#667479] text-sm font-medium font-[GilroyMedium]">
           {filterSearch.length} puppies
         </p>
       </div>
@@ -97,7 +97,7 @@ function Product() {
           {filterSearch.length>0?(
         <ProductItem product={filterSearch}/>
       ): (
-        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold capitalize">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} {selected.breed&&((selected.breed))} puppies </p>
+        <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold font-[GilroyBold] capitalize">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} {selected.breed&&((selected.breed))} puppies </p>
       )}
         </div>
       )}
