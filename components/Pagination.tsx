@@ -47,7 +47,7 @@ const DOTS = "..."
         <ArrowLeft className="h-4 w-4"/>
       </button>
 
-      {paginationRange.map((page:any, idx:any) => (
+      {paginationRange.map((page:number | string, idx:number) => (
         <Button
           key={idx}
           variant={page === currentPage ? 'default' : 'ghost'}

@@ -9,3 +9,8 @@ export interface DataType  {
     popularity?: string;
     breed: "small"| 'medium'| 'large';
 }
+export interface FilterState {
+  gender: 'Male'| 'Female'| null;
+  color: 'red' | 'black&white' |'black' | 'silver' | "apricot" |'tan' | null
+  breed: "small"| 'medium'| 'large'| null
+}

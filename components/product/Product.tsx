@@ -16,16 +16,16 @@ import { ChevronDown, Funnel } from "lucide-react";
 import FIlterSearch from "../FIlterSearch";
 import ProductItem from "./ProductItem";
 import { dogData } from "@/action/data";
-import { DataType } from "@/typing";
+import { DataType, FilterState } from "@/typing";
 import { useEffect, useState } from "react";
 function Product() {
   const product:DataType[]  = dogData 
   const [Sortby, setSortby] = useState('')
   const [filterSearch, setfilterSearch] = useState<DataType[]>([])
-  const [selected, setSelected] = useState({
-    gender: '',
-    color: '',
-    breed: ''
+  const [selected, setSelected] = useState<FilterState>({
+    gender: null,
+    color: null,
+    breed:null
   });
   useEffect(() => {
   let filtered = [...product];

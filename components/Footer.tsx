@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="py-10 -mx-5 px-5 xl:-mx-20 xl:px-20 bg-[linear-gradient(180deg,#FCEED5,#FCEED5,#FFE7BA)] rounded-t-[20px]">
         <div className="bg-[#003459] p-[16px] rounded-[16px] flex flex-col xl:flex-row items-center justify-center mb-8">
-            <p className="text-white text-[20px] leading-[32px] capitalize font-bold mb-5">Register now so you don't miss our programs</p>
+            <p className="text-white text-[20px] leading-[32px] capitalize font-bold mb-5">Register now so you don&apos;t miss our programs</p>
             <form action="" className="bg-white w-full rounded-[14px] p-[12px] flex flex-col xl:flex-row item-center justify-center gap-[10px] ">
                 <input placeholder="Enter your Email" type="text" name="email" id="email" className="border flex-1 border-[#99A2A5] text-sm font-medium placeholder:text-[#99A2A5] focus:outline-none rounded-[8px] py-[14px] px-[28px]" />
                     <button className="bg-[#003459] text-white cursor-pointer rounded-[8px] px-[28px] pt-[14px] pb-[10px] text-base" type="submit">Subcribe Now</button>
