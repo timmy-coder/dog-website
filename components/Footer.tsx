@@ -7,7 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 function Footer() {
   return (
-    <footer className="py-10 -mx-5 px-5 xl:-mx-20 xl:px-20 bg-[linear-gradient(180deg,#FCEED5,#FCEED5,#FFE7BA)] rounded-t-[20px]">
+    <footer className="py-10 -mx-5 px-5 xl:-mx-20 xl:px-20 bg-[#FCEED5] xl:bg-[linear-gradient(180deg,#FCEED5,#FCEED5,#FFE7BA)] rounded-t-[20px]">
         <div className="bg-[#003459] p-[16px] rounded-[16px] flex flex-col xl:flex-row items-center justify-center mb-8">
             <p className="text-white text-[20px] leading-[32px] capitalize font-bold font-[GilroyBold] mb-5">Register now so you don&apos;t miss our programs</p>
             <form action="" className="bg-white w-full rounded-[14px] p-[12px] flex flex-col xl:flex-row item-center justify-center gap-[10px] ">
