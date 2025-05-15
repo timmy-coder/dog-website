@@ -22,6 +22,7 @@ function Product() {
   const product:DataType[]  = dogData 
   const [Sortby, setSortby] = useState('')
   const [filterSearch, setfilterSearch] = useState<DataType[]>([])
+  const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<FilterState>({
     gender: null,
     color: null,
@@ -44,6 +45,7 @@ function Product() {
     filtered = filtered.filter((e) => e.title === Sortby);
   }
   setfilterSearch(filtered);
+  setLoading(false)
 }, [Sortby, selected]);
   return (
     <div>
@@ -85,10 +87,19 @@ function Product() {
         </Dialog>
       </div>
 
-      {filterSearch.length>0?(
+      {loading?(
+        <div className=" flex items-center justify-center my-5 xl:mt-40">
+           <div className="w-8 h-8 border-4 border-t-transparent border-[#003459] rounded-full animate-spin"></div>
+        </div>
+       
+      ):(
+        <div>
+          {filterSearch.length>0?(
         <ProductItem product={filterSearch}/>
       ): (
         <p className="text-center my-10 xl:mt-40 text-[#003459] text-2xl font-bold capitalize">No search result for {Sortby?Sortby:'Any'} ({selected.gender}) {selected.color&&((selected.color))} {selected.breed&&((selected.breed))} puppies </p>
+      )}
+        </div>
       )}
         </div>
       </div>
