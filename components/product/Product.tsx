@@ -57,7 +57,7 @@ function Product() {
         <div className="flex-1">
           <div className="flex items-center justify-between mb-5">
         <DropdownMenu>
-          <DropdownMenuTrigger className="outline-none border flex items-center gap-[4px] pt-[10px] pb-[8px] pl-[20px] pr-[12px] border-[#CCD1D2] rounded-[20px] text-[#667479] font-medium font-[GilroyMedium]">
+          <DropdownMenuTrigger className="outline-none cursor-pointer border flex items-center gap-[4px] pt-[10px] pb-[8px] pl-[20px] pr-[12px] border-[#CCD1D2] rounded-[20px] text-[#667479] font-medium font-[GilroyMedium]">
             Sort by:  {Sortby==='popular'?Sortby:'Name'} <ChevronDown size={20} />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="text-[#667479] font-medium">

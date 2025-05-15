@@ -22,7 +22,6 @@ export function usePagination({ totalPages, siblingCount = 1, currentPage }: Use
     const shouldShowRightEllipsis = rightSiblingIndex < totalPages - 1;
     const firstPageIndex = 1;
     const lastPageIndex = totalPages;
-
     if (!shouldShowLeftEllipsis && shouldShowRightEllipsis) {
       const leftItemCount = 3 + 2 * siblingCount;
       const leftRange = range(1, leftItemCount);
@@ -33,7 +32,6 @@ export function usePagination({ totalPages, siblingCount = 1, currentPage }: Use
       const rightRange = range(totalPages - rightItemCount + 1, totalPages);
       return [firstPageIndex, DOTS, ...rightRange];
     }
-
     if (shouldShowLeftEllipsis && shouldShowRightEllipsis) {
       const middleRange = range(leftSiblingIndex, rightSiblingIndex);
       return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];

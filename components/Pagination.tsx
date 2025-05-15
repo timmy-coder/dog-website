@@ -53,7 +53,7 @@ const DOTS = "..."
           variant={page === currentPage ? 'default' : 'ghost'}
           onClick={() => handlePageChange(page)}
           disabled={page === DOTS}
-          className={`h-8 w-8   ${page === DOTS ? 'cursor-default bg-[#003459] text-white' : ''}`}
+          className={`h-8 w-8   ${page === DOTS ? 'cursor-pointer bg-[#003459] text-white' : ''}`}
         >
           {page}
         </Button>
