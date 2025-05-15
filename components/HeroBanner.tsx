@@ -26,7 +26,7 @@ function HeroBanner() {
       </Breadcrumb>
 
    <div className="hidden md:flex items-center  w-full px-20 relative  h-[400px]">
-    <div className="z-10  w-full mt-[101px]  ">
+    <div className="z-10  w-full mt-[101px] rounded-tr-[20px]  ">
         <img src="/bigDogImage.png" alt="dogs" className="w-[700px]  h-[300px]" />
     </div>
     <div className="relative z-10  flex flex-col items-end justify-end w-full  text-white">
@@ -43,7 +43,7 @@ function HeroBanner() {
       </div>
     </div> 
   {/* Left Section (light background) */}
-  <div className="w-3/4 h-[400px] bg-[#FDF1DC] absolute left-0">
+  <div className="w-3/4 h-[400px] bg-[#FDF1DC] rounded-tl-[20px] rounded-bl-[20px] absolute left-0">
    
   
   </div>
@@ -53,7 +53,7 @@ function HeroBanner() {
     <img
       src="/curve.png"
       alt="curve shape"
-      className="absolute left-0 top-0 w-full h-full"
+      className="absolute left-0 top-0 rounded-tr-[20px] rounded-br-[20px] w-full h-full"
     />
   </div>
 </div>
