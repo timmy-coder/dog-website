@@ -15,7 +15,7 @@ function NavBar() {
       </div>
 
       {/* Large screen navigation */}
-      <nav className="hidden xl:flex items-center justify-between my-5">
+      <nav className="hidden xl:flex items-center justify-between my-8">
         <div className="flex items-center gap-10">
         <Image src={Logo} width={115} height={40} alt="Logo Icon" />
         <ul className="text-[#00171F] text-base flex font-bold gap-[40px]">
